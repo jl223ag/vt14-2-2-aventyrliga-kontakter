@@ -14,6 +14,15 @@ form{
     padding: 20px;
     display: block;
 }
+#closeSaveMessage{
+    width: 638px;
+    margin: -20px 0 0 -20px;
+    text-align: right;
+}
+#closeSaveMessage:hover{
+    outline: 1px solid green;
+    cursor: pointer;
+}
 #ValidationSummary1, #ValidationSummary2, #ErrorMessages{
     color: red;
     background-color: pink;

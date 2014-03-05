@@ -11,9 +11,12 @@
 
     <form id="form1" runat="server">
     <h1>Äventyrliga kontakter</h1>
-    <div>
+    <div id="wrapper">
         <%-- Rättmeddelande --%>
-        <asp:Label ID="SaveMessage" runat="server" Text="Kontakten har sparats!" Visible="false"></asp:Label>
+        <div ID="SaveMessage" runat="server" Visible="false">
+            <p id="closeSaveMessage" onClick="remover()">X</p> <%-- javascript funktion --%>
+            <p id="saveText">Kontakten har sparats!</p>
+        </div>
 
         <%-- Felmeddelanden--%>
         <asp:PlaceHolder ID="ErrorMessages" runat="server">
@@ -147,5 +150,12 @@
 
     </div>
     </form>
+    <script>
+        function remover() {
+            var wrapper = document.getElementById("wrapper");
+            var saveMessage = document.getElementById("SaveMessage");
+            wrapper.removeChild(saveMessage);
+        };
+    </script>
 </body>
 </html>
